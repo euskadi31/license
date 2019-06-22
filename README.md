@@ -22,6 +22,16 @@ List available licenses
 license list
 ```
 
+Show current license
+```shell
+license current
+```
+
+Extract all licenses in your projects
+```shell
+license extract
+```
+
 License
 -------
 

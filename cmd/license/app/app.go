@@ -34,12 +34,12 @@ func New() (*cli.App, error) {
 	}
 	app.Copyright = "(c) " + year + " Axel Etcheverry"
 	app.HelpName = "license tools"
-	app.Usage = "demonstrate available API"
-	app.UsageText = "contrive - demonstrating the available API"
-	app.ArgsUsage = "[args and such]"
+	app.Usage = "License is a tool for creating, extracting and recording all of the license files in your project."
 	app.Commands = []cli.Command{
 		commands.NewCommand(),
 		commands.ListCommand(),
+		commands.ExtractCommand(),
+		commands.CurrentCommand(),
 	}
 	app.EnableBashCompletion = true
 	app.HideHelp = false
@@ -57,7 +57,7 @@ func New() (*cli.App, error) {
 		// cli.ShowCommandHelp(c, "also-nope")
 		// cli.ShowCompletions(c)
 		// cli.ShowSubcommandHelp(c)
-		cli.ShowVersion(c)
+		//cli.ShowVersion(c)
 
 		c.App.Setup()
 
