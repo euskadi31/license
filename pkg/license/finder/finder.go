@@ -10,12 +10,11 @@ import (
 )
 
 const (
-	extensionPattern      = "\\.(md|markdown|txt|html)"
-	otherExtensionPattern = ""
-	licensePattern        = "(un)?licen[sc]e"
-	copyingPattern        = "copy(ing|right)"
-	oflPattern            = "ofl"
-	patentsPattern        = "patents"
+	extensionPattern = "\\.(md|markdown|txt|html)"
+	licensePattern   = "(un)?licen[sc]e"
+	copyingPattern   = "copy(ing|right)"
+	oflPattern       = "ofl"
+	patentsPattern   = "patents"
 )
 
 // see: github.com/licensee/licensee/lib/licensee/project_files/license_file.rb
@@ -51,9 +50,5 @@ func LicenseFileScore(file string) float64 {
 
 // IsLicenseFile return true if file is license
 func IsLicenseFile(file string) bool {
-	if LicenseFileScore(file) >= 0.30 {
-		return true
-	}
-
-	return false
+	return LicenseFileScore(file) >= 0.30
 }
