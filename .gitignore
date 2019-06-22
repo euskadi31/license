@@ -1,0 +1,6 @@
+build/
+_licenses/
+demo/
+
+*.tmp
+*.out
