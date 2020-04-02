@@ -8,5 +8,5 @@ require (
 	github.com/google/licenseclassifier v0.0.0-20190501212618-47b603fe1b8c
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.5.1
-	github.com/urfave/cli v1.22.3
+	github.com/urfave/cli v1.22.4
 )
