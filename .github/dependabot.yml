@@ -1,0 +1,14 @@
+version: 2
+updates:
+- package-ecosystem: gomod
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: github.com/AlecAivazis/survey/v2
+    versions:
+    - 2.2.7
+    - 2.2.8
+    - 2.2.9
